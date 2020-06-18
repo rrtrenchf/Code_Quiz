@@ -29,7 +29,7 @@ var questions = [{
 // The first view of the application displays a button used to start the quiz.
 
 //these are global variables
-var secondsLeft = 20;
+var secondsLeft = 60;
 //track the questions
 var qindex=0
 var score=0
@@ -99,29 +99,29 @@ function gameOver(){
     options.innerHTML=""
     titleEl.textContent= "Game Over! Score = " + score
     timerEl.setAttribute("style", "display:none")
-    storeScore()
-    displayScore()
+    // storeScore()
+    // displayScore()
   
 }
 //save in local storage
 
-function storeScore(event) {   
- var input= inputEl.value
-  localStorage.setItem([input],[score],JSON(stringify));
+// function storeScore(event) {   
+//  var input= inputEl.value
+//   localStorage.setItem([input],[score],JSON(stringify));
 
   
 
   
-}
-//display scoreboard
-function displayScore(){
-  var score=json.parse(localStorage.getItem(input, score))
-  gameOver.setAttribute("style","display:none")
+// }
+// //display scoreboard
+// function displayScore(){
+//   var score=json.parse(localStorage.getItem(input, score))
+//   gameOver.setAttribute("style","display:none")
   
 
-}
-//submitting score
-submit.addEventListener("click", storeScore,displayScore)
+// }
+// //submitting score
+// submit.addEventListener("click", storeScore,displayScore)
   
 
 
